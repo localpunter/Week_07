@@ -4,5 +4,11 @@ label::after {
 
 body {
   background-color: lightsteelblue;
-  font-family: helvetica;
+  /* font-family: helvetica; */
+}
+
+
+img {
+  max-width: 100%;
+  max-height: 100%;
 }
