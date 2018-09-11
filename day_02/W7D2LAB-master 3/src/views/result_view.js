@@ -25,15 +25,16 @@ ResultView.prototype.render = function(planet){
 
   const planetInfo = document.createElement('p');
   planetInfo.setAttribute('style', 'white-space: pre;');
-  planetInfo.textContent = `Day: ${planet.day} Earth days\r\nOrbit: ${planet.orbit} Earth days\r\nSurface Area: ${planet.surfaceArea} Earths\r\nVolume: ${planet.volume} Earths\r\nGravity: ${planet.gravity}g\r\nMoons: ${planet.moons}`;
+  planetInfo.textContent = `Day: ${planet.day} Earth days\r\nOrbit: ${planet.orbit} Earth days\r\n
+  Surface Area: ${planet.surfaceArea} Earths\r\nVolume: ${planet.volume} Earths\r\n
+  Gravity: ${planet.gravity}g\r\nMoons: ${planet.moons}`;
   infoContainer.appendChild(planetInfo);
 
   const planetImage = document.createElement('img');
   planetImage.src = `./${planet.image}`;
   planetImage.alt = `A picture of ${planet.name}`
   imgContainer.appendChild(planetImage);
-
-
+  
 };
 
 module.exports = ResultView;
