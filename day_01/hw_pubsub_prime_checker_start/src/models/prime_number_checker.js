@@ -18,11 +18,13 @@ PrimeNumberChecker.prototype.bindEvents = function () {
 };
 
 PrimeNumberChecker.prototype.checkIfPrime = function (number) {
-  if (number <= 1) return false
-    for(let i = 2, s = Math.sqrt(number); i <= s; i++){
-        if(number % i === 0) return false;
-      }
-    return true;
+  if (number <= 1)
+  return false
+  for(let i = 2, s = Math.sqrt(number); i <= s; i++){
+    if(number % i === 0)
+    return false;
+  }
+  return true;
 };
 
 
