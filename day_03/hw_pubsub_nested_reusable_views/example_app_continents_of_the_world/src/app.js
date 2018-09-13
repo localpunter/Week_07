@@ -4,6 +4,7 @@ const Continents = require('./models/continents.js');
 document.addEventListener('DOMContentLoaded', () => {
   const continentsListContainer = document.querySelector('#continents');
   const continentsListView = new ContinentListView(continentsListContainer);
+  console.log('ContinentListView', continentsListContainer);
   continentsListView.bindEvents();
 
   const continents = new Continents();

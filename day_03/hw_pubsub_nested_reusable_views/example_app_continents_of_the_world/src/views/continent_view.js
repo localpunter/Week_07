@@ -23,6 +23,7 @@ ContinentView.prototype.createContinentHeading = function () {
   name.classList.add('continent-name');
   if (!this.continent.name) {
     name.textContent = "Misc";
+    console.log('getContName', name);
   } else {
     name.textContent = this.continent.name;
   }
@@ -33,6 +34,7 @@ ContinentView.prototype.createCountriesList = function () {
   const countriesList = document.createElement('ul');
   countriesList.classList.add('countries');
   this.populateList(countriesList);
+  console.log('countriesList', countriesList);
   return countriesList;
 };
 

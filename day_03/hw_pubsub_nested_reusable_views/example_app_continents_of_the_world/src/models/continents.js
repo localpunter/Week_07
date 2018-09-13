@@ -8,7 +8,9 @@ const Continents = function () {
 Continents.prototype.getData = function () {
   const requestHelper = new RequestHelper('https://restcountries.eu/rest/v2/all');
   requestHelper.get((data) => {
+    console.log('data-ready', data);
     this.handleDataReady(data);
+    console.log('after manipulation', this.continents);
     PubSub.publish('Continents:continents-data-ready', this.continents);
   });
 };
@@ -26,6 +28,8 @@ Continents.prototype.getContinentNames = function (countries) {
 
 Continents.prototype.modelContinents = function (countries, continentNames) {
   this.continents = continentNames.map((continentName) => {
+    console.log('continentArray', continentNames);
+    console.log('continentName', continentName);
     return {
       name: continentName,
       countries: this.countriesByContinent(countries, continentName)

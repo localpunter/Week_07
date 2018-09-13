@@ -15,6 +15,7 @@ ContinentsListView.prototype.bindEvents = function () {
 ContinentsListView.prototype.render = function () {
   this.continents.forEach((continent) => {
     const continentView = new ContinentView(this.container, continent);
+    // this is where each view is newed up
     continentView.render();
   });
 };
