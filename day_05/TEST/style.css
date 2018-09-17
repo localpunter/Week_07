@@ -51,8 +51,8 @@ p {
 }
 
 .card:hover {
-  box-shadow: 2px 8px 45px rgba(0, 0, 0, .15);
-  transform: translate3D(0, -2px, 0);
+  box-shadow: 5px 10px 45px rgba(0, 0, 0, .50);
+  transform: translate3D(0, -10px, 0);
 }
 
 @media screen and (min-width: 600px) {
@@ -68,13 +68,13 @@ p {
 }
 
 .card:nth-child(2n) h1 {
-  background-image: linear-gradient(120deg, #225e39 0%, #b4d142 100%);
-}
-
-.card:nth-child(4n) h1 {
-  background-image: linear-gradient(120deg, #b7474c 0%, #e56ebf 100%);
+  background-image: linear-gradient(120deg, #225e39 0%, #dae03c 100%);
 }
 
 .card:nth-child(5n) h1 {
+  background-image: linear-gradient(120deg, #b7474c 0%, #e56ebf 100%);
+}
+
+.card:nth-child(4n) h1 {
   background-image: linear-gradient(120deg, #d8763c 0%, #992f41 100%);
 }

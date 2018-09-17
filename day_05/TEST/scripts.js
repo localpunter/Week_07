@@ -2,7 +2,7 @@ const app = document.getElementById('root');
 console.log('getElementById', app);
 
 const logo = document.createElement('img');
-logo.src = ('/image/logo.png');
+logo.src = ('./image/ghibli.png');
 
 const container = document.createElement('div');
 container.setAttribute('class', 'container');
@@ -37,7 +37,7 @@ request.onload = function () {
 
       // create a p and ser the text content to the films description
       const p = document.createElement('p');
-      movie.description = movie.description.substring(0, 400); // Limit to 300 characters
+      movie.description = movie.description.substring(0, 400); // Limit to 400 characters
       p.textContent = `${movie.description}...`; // end with an ellipses (...)
 
       // append the cards to the container element
