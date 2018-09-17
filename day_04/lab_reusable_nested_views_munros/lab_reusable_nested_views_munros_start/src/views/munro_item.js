@@ -10,6 +10,10 @@ const MunroListItem = function(element, munro) {
 
 
 MunroListItem.prototype.render = function () {
+  // Create a div
+  // Create h2 - h5
+  // Append to the div
+  // Append to h2 - h5
   const container = createAndAppend('div', null, '', this.element);
   const name = createAndAppend('h2', null, `Name: ${this.munro.name}`, container);
   const height = createAndAppend('h3', null, `Height: ${this.munro.height}`, container);

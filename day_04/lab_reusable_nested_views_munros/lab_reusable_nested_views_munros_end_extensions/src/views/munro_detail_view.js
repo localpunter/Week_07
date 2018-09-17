@@ -11,20 +11,27 @@ MunroDetailView.prototype.createMunroDetail = function (munro) {
   munroDetail.appendChild(name);
 
   const detailsList = document.createElement('ul');
+
+  const height = this.createDetailListItem('Height', munro.height);
+  detailsList.appendChild(height);
+
+  const region = this.createDetailListItem('Region', munro.region);
+  detailsList.appendChild(region);
+
   const meaning = this.createDetailListItem('Meaning', munro.meaning);
   detailsList.appendChild(meaning);
-
-  const height = this.createDetailListItem('Height', munro.height)
-  detailsList.appendChild(height);
 
   munroDetail.appendChild(detailsList);
   return munroDetail;
 };
+
+
 
 MunroDetailView.prototype.createDetailListItem = function (label, property) {
   const element = document.createElement('li');
   element.textContent = `${label}: ${property}`;
   return element;
 };
+
 
 module.exports = MunroDetailView;
